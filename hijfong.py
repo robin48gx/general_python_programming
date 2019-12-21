@@ -1,5 +1,6 @@
 import random
 
+# (c) R P Clark 2019
 
 def mandelbrot (re, Im, max_iter):
   c = complex (Re,Im)
