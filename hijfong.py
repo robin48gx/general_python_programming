@@ -16,8 +16,9 @@ def redrawAll(canvas):
     canvas.create_rectangle(0, 0, 1000, 1000, fill="grey")
     # draw semi-transparent rectangles in the middle
 
+
 def leftclick(event):
-    print("player 1")
+    print("tricky click")
     #print event.x, event.y
     r = event.x/1000.0*3.0 -2.0 + rseed
     i = (1000-event.y)/1000.0*2.0 -1.0 + iseed
@@ -34,11 +35,11 @@ def leftclick(event):
     if mm < 21 and mm > 2:
       print "you are in the CHAOS zone "
     print "Stability factor=",mm," x=",ro,"y=",io
-    if mm > 65 and mm < 80:
-      print "you found the RAGGED EDGE OF CHAOS YOU WON"
+    if mm > 65 and mm < 75:
+      print "you found the RAGGED EDGE OF CHAOS YOU WON with effort level TRICKY"
       draw_complete()
 def rightclick(event):
-    print("player 2")
+    print("Easy click")
     print event.x, event.y
     r = event.x/1000.0*3.0 -2.0 + rseed
     i = (1000-event.y)/1000.0*2.0 -1.0 + iseed
@@ -56,7 +57,7 @@ def rightclick(event):
       print "you are in the CHAOS zone "
     print "Stability factor=",mm," x=",ro,"y=",io
     if mm > 20 and mm < 80:
-      print "you found the RAGGED EDGE OF CHAOS YOU WON"
+      print "you found the RAGGED EDGE OF CHAOS YOU WON with effort level EASY"
       draw_complete()
 def middleclick(event):
     print("middle")
@@ -95,13 +96,13 @@ def mandelbrot (re, Im, max_iter):
 def get_col(mm):
     if ( mm > 99 ):
         return "black"
-    if ( mm > 90 ):
+    if ( mm > 85 ):
         return "blue"
-    if ( mm > 80 ):
+    if ( mm > 75 ):
         return "cornflowerblue"
-    if ( mm > 69 ):
+    if ( mm > 59 ):
         return "green"
-    if ( mm > 60 ):
+    if ( mm > 40 ):
         return "cyan"
     if ( mm > 30 ):
         return "pink"
