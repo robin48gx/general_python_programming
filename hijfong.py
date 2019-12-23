@@ -16,10 +16,48 @@ def redrawAll(canvas):
     # draw semi-transparent rectangles in the middle
 
 def leftclick(event):
-    print("left")
+    print("player 1")
     print event.x, event.y
+    r = event.x/1000.0*3.0 -2.0 + rseed
+    i = (1000-event.y)/1000.0*2.0 -1.0 + iseed
+    print "as coords in mandel plane r=",r," i=",i
+    ro = event.x
+    io = 1000-event.y
+    print "as coords to plot x=",ro," y=",1000-io
+    mm = mandelbrot(r,i,100)
+    col = get_col(mm)
+    io = 1000 - io
+    canvas.create_rectangle(ro, io, ro+10, io+10, fill=col)
+    if mm > 98:
+      print "you are in the STABLE zone "
+    if mm < 21 and mm > 2:
+      print "you are in the CHAOS zone "
+    print "Stability factor=",mm," x=",ro,"y=",io
+    if mm > 20 and mm < 80:
+      print "you found the RAGGED EDGE OF CHAOS YOU WON PLAYER 2"
+      draw_complete()
 def middleclick(event):
-    print("middle")
+    print("player 2")
+    print event.x, event.y
+    r = event.x/1000.0*3.0 -2.0 + rseed
+    i = (1000-event.y)/1000.0*2.0 -1.0 + iseed
+    print "as coords in mandel plane r=",r," i=",i
+    ro = event.x
+    io = 1000-event.y
+    print "as coords to plot x=",ro," y=",1000-io
+    mm = mandelbrot(r,i,100)
+    col = get_col(mm)
+    io = 1000 - io
+    canvas.create_rectangle(ro, io, ro+10, io+10, fill=col)
+    if mm > 98:
+      print "you are in the STABLE zone "
+    if mm < 21 and mm > 2:
+      print "you are in the CHAOS zone "
+    print "Stability factor=",mm," x=",ro,"y=",io
+    if mm > 20 and mm < 80:
+      print "you found the RAGGED EDGE OF CHAOS YOU WON PLAYER 2"
+      draw_complete()
+
 def rightclick(event):
     print("right")
 
@@ -56,6 +94,8 @@ def get_col(mm):
         return "blue"
     if ( mm > 80 ):
         return "green"
+    if ( mm > 16 ):
+        return "pink"
     if ( mm > 12 ):
         return "red"
     if ( mm > 8 ):
@@ -89,22 +129,28 @@ rseed = r
 iseed = i
 
 def draw_complete():
-    print "draw complete called"
-    for rr in range (0, 100):
-        print " rr ", rr
-        for ii in range (0, 100):
-            # for the mandelbrot
-            # the middle of this part is defined by the seeds
-            # rr goes from 0 to 1000 but it means -2.0 to 1.0
-            # ii goes from 0 to 1000 but it means -1.0 to 1.0
-            # the mid point 500,500 is the seed
-            Re = (((rr-500) * 2.0))/100.0 - 1.0 #+ rseed
-            Im = (((ii-500) * 3.0))/100.0 - 2.0 #+ iseed
-            mm = mandelbrot(Re,Im,100)
-            col = get_col(mm)
-            canvas.create_rectangle(rr*10, 1000-ii*10, rr*10+10, 1000-ii*10+10, fill=col)
-
-
+  print "draw complete called"
+  for rr in range (0, 1000, 10):
+   print " rr ", rr
+   for ii in range (0, 1000, 10):
+     r = rr/1000.0*3.0 -2.0 + rseed
+     i = ii/1000.0*2.0 -1.0 + iseed
+     #print "as coords in mandel plane r=",r," i=",i
+     ro = rr
+     io = 1000-ii
+     print "as coords to plot x=",ro," y=",1000-io
+     mm = mandelbrot(r,i,100)
+     col = get_col(mm)
+     io = 1000 - io
+     canvas.create_rectangle(ro, io, ro+10, io+10, fill=col)
+     if mm > 98:
+       print "you are in the STABLE zone "
+     if mm < 21 and mm > 2:
+       print "you are in the CHAOS zone "
+     print "Stability factor=",mm," x=",ro,"y=",io
+     if mm > 20 and mm < 80:
+       print "you found the RAGGED EDGE OF CHAOS YOU WON PLAYER 2"
+ 
 
 
 #rseed = 0
