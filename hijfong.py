@@ -1,6 +1,16 @@
 import random
 #from graphics import *
 #win = GraphWin()
+# library
+#import seaborn as sns
+#import pandas as pd
+#import numpy as np
+ 
+# Create a dataset (fake)
+#df = pd.DataFrame(np.random.random((5,5)), columns=["a","b","c","d","e"])
+ 
+# Default heatmap: just a visualization of this square matrix
+#p1 = sns.heatmap(df)
 
 
 
@@ -48,6 +58,10 @@ while 1:
   io = io + float(imag)
 
   mm = mandelbrot(r,i,100)
+  if mm > 98:
+      print "you are in the STABLE zone "
+  if mm < 21:
+      print "you are in the CHAOS zone "
   print "Stability factor=",mm," x=",ro*100,"y=",io*100
   if mm > 20 and mm < 80:
     print "you won"
@@ -61,7 +75,11 @@ while 1:
   io = io + float(imag)
   
   mm =  mandelbrot(r,i,100)
+  if mm > 98:
+      print "you are in the STABLE zone "
+  if mm < 21:
+      print "you are in the CHAOS zone "
   print "Stability factor=",mm," x=",ro*100,"y=",io*100
   if mm > 20 and mm < 80:
-    print "you won"
+    print "you found the RAGGED EDGE OF CHAOS YOU WON"
   
