@@ -5,10 +5,11 @@ import random
 #import seaborn as sns
 #import pandas as pd
 #import numpy as np
-
+import math
 
 from Tkinter import *
 
+# (c) R P Clark 2019
 def redrawAll(canvas):
     canvas.delete(ALL)
     # draw a red rectangle on the left half
@@ -33,7 +34,7 @@ def leftclick(event):
     if mm < 21 and mm > 2:
       print "you are in the CHAOS zone "
     print "Stability factor=",mm," x=",ro,"y=",io
-    if mm > 20 and mm < 80:
+    if mm > 75 and mm < 80:
       print "you found the RAGGED EDGE OF CHAOS YOU WON PLAYER 2"
       draw_complete()
 def rightclick(event):
@@ -74,13 +75,18 @@ root.canvas = canvas.canvas = canvas
 canvas.data = { }
 redrawAll(canvas)
 
-# (c) R P Clark 2019
-
+rot = random.randint(-1570, 1570) / 1000.0
+zz = complex(math.cos(rot), math.sin(rot))
+print " rotation ", rot, "degrees ", 90*rot/1.57, "zz ",  zz
 def mandelbrot (re, Im, max_iter):
-  c = complex (Re,Im)
+  c = complex (Re,Im) 
+  print " complex c ",c
+  c = c * zz
+  print " complex c after rotaion with zz",zz, " c is now ", c
   z = 0.0j
   for i in range (max_iter):
-     c = complex(re,Im)
+     c = complex(re,Im) 
+     c = c * zz
      z = z * z + c
      if ( z.real * z.real + z.imag * z.imag) > 4:
          return i
@@ -93,6 +99,8 @@ def get_col(mm):
         return "blue"
     if ( mm > 80 ):
         return "green"
+    if ( mm > 80 ):
+        return "lightgreen"
     if ( mm > 60 ):
         return "cyan"
     if ( mm > 30 ):
