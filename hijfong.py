@@ -35,7 +35,7 @@ def leftclick(event):
       print "you are in the CHAOS zone "
     print "Stability factor=",mm," x=",ro,"y=",io
     if mm > 65 and mm < 80:
-      print "you found the RAGGED EDGE OF CHAOS YOU WON PLAYER 2"
+      print "you found the RAGGED EDGE OF CHAOS YOU WON"
       draw_complete()
 def rightclick(event):
     print("player 2")
@@ -56,7 +56,7 @@ def rightclick(event):
       print "you are in the CHAOS zone "
     print "Stability factor=",mm," x=",ro,"y=",io
     if mm > 20 and mm < 80:
-      print "you found the RAGGED EDGE OF CHAOS YOU WON PLAYER 2"
+      print "you found the RAGGED EDGE OF CHAOS YOU WON"
       draw_complete()
 def middleclick(event):
     print("middle")
@@ -148,7 +148,6 @@ iseed = i
 def draw_complete():
   print "draw complete called"
   for rr in range (0, 1000, 10):
-   print " rr ", rr
    for ii in range (0, 1000, 10):
      r = rr/1000.0*3.0 -2.0 + rseed
      i = ii/1000.0*2.0 -1.0 + iseed
@@ -160,8 +159,6 @@ def draw_complete():
      col = get_col(mm)
      #io = 1000 - io
      canvas.create_rectangle(ro, io, ro+10, io+10, fill=col)
-     print "Stability factor=",mm," x=",ro,"y=",io
-     print "you found the RAGGED EDGE OF CHAOS YOU WON"
  
 
 
