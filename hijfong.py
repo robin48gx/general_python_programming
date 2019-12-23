@@ -1,11 +1,14 @@
 import random
+#from graphics import *
+#win = GraphWin()
+
+
 
 # (c) R P Clark 2019
 
 def mandelbrot (re, Im, max_iter):
   c = complex (Re,Im)
   z = 0.0j
-
   for i in range (max_iter):
      c = complex(re,Im)
      z = z * z + c
@@ -25,8 +28,8 @@ for Re in range ( -2000, 1000, 333 ):
 mm = 40
 
 # make sure 0,0 as first answer cannot win
-
-while mm < 80 and mm > 20:
+# i.e. in the stable or very chaotic area
+while mm < 90 and mm > 10:
   r = random.randint(-2000, 1000) / 1000.0
   i = random.randint(-1000, 1000) / 1000.0
   mm = mandelbrot(r,i,100)
@@ -41,8 +44,8 @@ while 1:
   
   r = r + float(real)/100.0;
   i = i + float(imag)/100.0;
-  ro = ro + float(r)
-  io = io + float(i)
+  ro = ro + float(real)
+  io = io + float(imag)
 
   mm = mandelbrot(r,i,100)
   print "Stability factor=",mm," x=",ro*100,"y=",io*100
@@ -54,8 +57,8 @@ while 1:
   
   r = r + float(real)/100.0;
   i = i + float(imag)/100.0;
-  ro = ro + float(r)
-  io = io + float(i)
+  ro = ro + float(real)
+  io = io + float(imag)
   
   mm =  mandelbrot(r,i,100)
   print "Stability factor=",mm," x=",ro*100,"y=",io*100
