@@ -36,7 +36,7 @@ def leftclick(event):
     if mm > 20 and mm < 80:
       print "you found the RAGGED EDGE OF CHAOS YOU WON PLAYER 2"
       draw_complete()
-def middleclick(event):
+def rightclick(event):
     print("player 2")
     print event.x, event.y
     r = event.x/1000.0*3.0 -2.0 + rseed
@@ -57,9 +57,8 @@ def middleclick(event):
     if mm > 20 and mm < 80:
       print "you found the RAGGED EDGE OF CHAOS YOU WON PLAYER 2"
       draw_complete()
-
-def rightclick(event):
-    print("right")
+def middleclick(event):
+    print("middle")
 
 # create the root and the canvas
 root = Tk()
@@ -141,7 +140,7 @@ def draw_complete():
      print "as coords to plot x=",ro," y=",1000-io
      mm = mandelbrot(r,i,100)
      col = get_col(mm)
-     io = 1000 - io
+     #io = 1000 - io
      canvas.create_rectangle(ro, io, ro+10, io+10, fill=col)
      if mm > 98:
        print "you are in the STABLE zone "
