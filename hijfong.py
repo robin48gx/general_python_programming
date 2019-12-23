@@ -18,13 +18,13 @@ def redrawAll(canvas):
 
 def leftclick(event):
     print("player 1")
-    print event.x, event.y
+    #print event.x, event.y
     r = event.x/1000.0*3.0 -2.0 + rseed
     i = (1000-event.y)/1000.0*2.0 -1.0 + iseed
-    print "as coords in mandel plane r=",r," i=",i
+    #print "as coords in mandel plane r=",r," i=",i
     ro = event.x
     io = 1000-event.y
-    print "as coords to plot x=",ro," y=",1000-io
+    #print "as coords to plot x=",ro," y=",1000-io
     mm = mandelbrot(r,i,100)
     col = get_col(mm)
     io = 1000 - io
@@ -34,7 +34,7 @@ def leftclick(event):
     if mm < 21 and mm > 2:
       print "you are in the CHAOS zone "
     print "Stability factor=",mm," x=",ro,"y=",io
-    if mm > 75 and mm < 80:
+    if mm > 65 and mm < 80:
       print "you found the RAGGED EDGE OF CHAOS YOU WON PLAYER 2"
       draw_complete()
 def rightclick(event):
@@ -42,10 +42,10 @@ def rightclick(event):
     print event.x, event.y
     r = event.x/1000.0*3.0 -2.0 + rseed
     i = (1000-event.y)/1000.0*2.0 -1.0 + iseed
-    print "as coords in mandel plane r=",r," i=",i
+    #print "as coords in mandel plane r=",r," i=",i
     ro = event.x
     io = 1000-event.y
-    print "as coords to plot x=",ro," y=",1000-io
+    #print "as coords to plot x=",ro," y=",1000-io
     mm = mandelbrot(r,i,100)
     col = get_col(mm)
     io = 1000 - io
@@ -80,9 +80,9 @@ zz = complex(math.cos(rot), math.sin(rot))
 print " rotation ", rot, "degrees ", 90*rot/1.57, "zz ",  zz
 def mandelbrot (re, Im, max_iter):
   c = complex (Re,Im) 
-  print " complex c ",c
+  #print " complex c ",c
   c = c * zz
-  print " complex c after rotaion with zz",zz, " c is now ", c
+  #print " complex c after rotaion with zz",zz, " c is now ", c
   z = 0.0j
   for i in range (max_iter):
      c = complex(re,Im) 
@@ -98,9 +98,9 @@ def get_col(mm):
     if ( mm > 90 ):
         return "blue"
     if ( mm > 80 ):
+        return "cornflowerblue"
+    if ( mm > 69 ):
         return "green"
-    if ( mm > 80 ):
-        return "lightgreen"
     if ( mm > 60 ):
         return "cyan"
     if ( mm > 30 ):
@@ -109,13 +109,17 @@ def get_col(mm):
         return "magenta"
     if ( mm > 12 ):
         return "red"
-    if ( mm > 8 ):
+    if ( mm > 9 ):
         return "yellow" 
-    if ( mm > 4 ):
+    if ( mm > 7 ):
+        return "gold" 
+    if ( mm > 5 ):
         return "orange" 
     if ( mm >= 3 ):
         return "grey"
-    if ( mm >= 0 ):
+    if ( mm >= 2 ):
+        return "lightgrey"
+    if ( mm <= 1 ):
         return "white"
 
 columns = 10
@@ -134,6 +138,8 @@ mm = 40
 while mm < 90 and mm > 10:
   r = random.randint(-2000, 1000) / 1000.0
   i = random.randint(-1000, 1000) / 1000.0
+  r = r/3.0
+  i = i/2.0
   mm = mandelbrot(r,i,100)
 
 rseed = r
@@ -149,18 +155,13 @@ def draw_complete():
      #print "as coords in mandel plane r=",r," i=",i
      ro = rr
      io = 1000-ii
-     print "as coords to plot x=",ro," y=",1000-io
+     #print "as coords to plot x=",ro," y=",1000-io
      mm = mandelbrot(r,i,100)
      col = get_col(mm)
      #io = 1000 - io
      canvas.create_rectangle(ro, io, ro+10, io+10, fill=col)
-     if mm > 98:
-       print "you are in the STABLE zone "
-     if mm < 21 and mm > 2:
-       print "you are in the CHAOS zone "
      print "Stability factor=",mm," x=",ro,"y=",io
-     if mm > 20 and mm < 80:
-       print "you found the RAGGED EDGE OF CHAOS YOU WON PLAYER 2"
+     print "you found the RAGGED EDGE OF CHAOS YOU WON"
  
 
 
