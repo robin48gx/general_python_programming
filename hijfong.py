@@ -93,8 +93,12 @@ def get_col(mm):
         return "blue"
     if ( mm > 80 ):
         return "green"
-    if ( mm > 16 ):
+    if ( mm > 60 ):
+        return "cyan"
+    if ( mm > 30 ):
         return "pink"
+    if ( mm > 16 ):
+        return "magenta"
     if ( mm > 12 ):
         return "red"
     if ( mm > 8 ):
@@ -178,7 +182,7 @@ while 1:
   if mm < 21:
       print "you are in the CHAOS zone "
   print "Stability factor=",mm," x=",ro,"y=",io
-  if mm > 20 and mm < 80:
+  if mm == 99: #if mm > 70 and mm < 75:
     print "you found the RAGGED EDGE OF CHAOS YOU WON"
     draw_complete()
 
@@ -198,7 +202,7 @@ while 1:
   if mm < 21:
       print "you are in the CHAOS zone "
   print "Stability factor=",mm," x=",ro,"y=",io
-  if mm > 20 and mm < 80:
+  if mm == 99: #if mm > 70 and mm < 75:
     print "you found the RAGGED EDGE OF CHAOS YOU WON"
     draw_complete()
   
