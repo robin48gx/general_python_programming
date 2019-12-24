@@ -77,7 +77,9 @@ canvas.data = { }
 redrawAll(canvas)
 
 rot = random.randint(-1570, 1570) / 1000.0
-zz = complex(math.cos(rot), math.sin(rot))
+mag = random.randint(500, 2570) / 1000.0
+#mag = 0.5
+zz = mag * complex(math.cos(rot), math.sin(rot))
 print " rotation ", rot, "degrees ", 90*rot/1.57, "zz ",  zz
 def mandelbrot (re, Im, max_iter):
   c = complex (Re,Im) 
