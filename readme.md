@@ -1,11 +1,13 @@
 
 
-* HIJ FONG !
+HIJ FONG !
+==========
 
-** Background: Chaos Mathematics
+Background: Chaos Mathematics
+-----------------------------
 
-This game is based on chaos mathemeatics.
-Back in the 1980's a computer scientist/matmmmatician
+This game is based on chaos mathematics.
+Back in the 1980's a computer scientist/mathematician
 Benort Mandelbrot discovered some maths functions that
 behaved in very stange ways. Instead of smoothly changing
 they became chaotic and unpredictable.
@@ -13,7 +15,8 @@ they became chaotic and unpredictable.
 This facinated the IBM scientist (who incidentally, was also paid by his employer to
 go up in planes and observe another chaotic phenomenem, the random shapes of clouds).
 
-** Natural Chaos: Nature will find a way
+Natural Chaos: Nature will find a way
+-------------------------------------
 
 The film Jurasic park features a chaos mathmetician brought in to
 look at the park and decide whether it was safe or not.
@@ -27,12 +30,14 @@ Another example of chaos in nature was the spraying of crops by DDT
 in the 1950's and 60's. At first all the insects died off and the farmers
 had far better crop yields (but also poisoned all the fish in the rivers and killed many wild birds).
 But, a tiny proportion of the insects, through the natural chaos
-of DNA mutation, because resistant. This tiny proportion that could cope with DDT
+of DNA mutation, because resistant. This tiny proportion that could cope with DDT, having no competition
+with other insects,
 grew in population rapidly and after a few years caused worse crop yields than before DDT
 was introduced. Anyone interested in this should read "silent spring" by "rachel carson"
-writtin in 1962.
+written in 1962.
 
-** How to play
+How to play
+-----------
 
 The program featured here starts with a blank tk graphics window. By clicking the mouse
 the chaotic function is revealed. Where in a stable zone the pixel is black.
@@ -45,7 +50,8 @@ Once this is clicked on the entire shape, previously hidden, is drawn in full on
 
 Enjoy the chaos!
 
-** For Maths people
+For Maths people
+----------------
 
 This game secretly rotates and resizes the hidden mandelbrot shape.
 It does this using complex numbers which naturally have an angle of rotation
