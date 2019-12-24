@@ -58,7 +58,7 @@ It does this using complex numbers which naturally have an angle of rotation
 and a sizing factor associated with them.
 Complex numbers are a pair of numbers, one real, the type of number
 we use every day, and a stranger one, an imaginary one.
-The imaginary numbers when multiplied  becomes a real numbers but minus!
+The imaginary numbers when multiplied  become real numbers but minus!
 Most maths people use the term 'i' to denote a number if imaginary,
 but people who live in the real world, like electronic engineers
 (and python programmers) use 'j'.
