@@ -7,8 +7,8 @@ Background: Chaos Mathematics
 -----------------------------
 
 This game is based on chaos mathematics.
-Back in the 1980's a computer scientist/mathematician
-Beniort Mandelbrot discovered some maths functions that
+Back in the 1970/80's a computer scientist/mathematician
+Benoit Mandelbrot discovered some maths functions that
 behaved in very strange ways. Instead of smoothly changing
 they became chaotic and unpredictable.
 
@@ -62,7 +62,7 @@ The imaginary numbers when multiplied  become real numbers but minus!
 Most maths people use the term 'i' to denote a number if imaginary,
 but people who live in the real world, like electronic engineers
 (and python programmers) use 'j'.
-In fact, most 3D games now used a 4 dimiensional version of complex numbers
+In fact, most 3D games now use a 4 dimiensional version of complex numbers
 called quaternions to rotate objects in the computer for you to shoot at!
 
 -----------------------------------------------------------------------------------------------------------------
