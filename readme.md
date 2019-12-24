@@ -9,18 +9,18 @@ Background: Chaos Mathematics
 This game is based on chaos mathematics.
 Back in the 1980's a computer scientist/mathematician
 Beniort Mandelbrot discovered some maths functions that
-behaved in very stange ways. Instead of smoothly changing
+behaved in very strange ways. Instead of smoothly changing
 they became chaotic and unpredictable.
 
-This facinated the IBM scientist (who incidentally, was also paid by his employer to
-go up in planes and observe another chaotic phenomenem, the random shapes of clouds).
+This fascinated the IBM scientist (who incidentally, was also paid by his employer to
+go up in planes and observe another chaotic phenomenon, the random shapes of clouds).
 
 Natural Chaos: Nature will find a way
 -------------------------------------
 
-The film Jurasic park features a chaos mathmetician brought in to
+The film Jurrassic park features a chaos mathematician brought in to
 look at the park and decide whether it was safe or not.
-He conclusded it was not. Nature would find a way to adapt, and 
+He concluded it was not. Nature would find a way to adapt, and 
 what they had done at the park was introduce a life form. Life forms can
 adapt and change. He reasoned that the dinosaurs in the park, would adapt, and
 later escape from the island causing a disaster!
@@ -53,12 +53,12 @@ Enjoy the chaos!
 For Maths people
 ----------------
 
-This game secretly rotates and resizes the hidden mandelbrot shape.
+This game secretly rotates and resizes the hidden Mandelbrot shape.
 It does this using complex numbers which naturally have an angle of rotation
 and a sizing factor associated with them.
 Complex numbers are a pair of numbers, one real, the type of number
 we use every day, and a stranger one, an imaginary one.
-The imaginary one when multiplied by itsself becaomes a real number but minus!
+The imaginary numbers when multiplied  becomes a real numbers but minus!
 Most maths people use the term 'i' to denote a number if imaginary,
 but people who live in the real world, like electronic engineers
 (and python programmers) use 'j'.
