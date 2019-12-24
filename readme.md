@@ -8,7 +8,7 @@ Background: Chaos Mathematics
 
 This game is based on chaos mathematics.
 Back in the 1980's a computer scientist/mathematician
-Benort Mandelbrot discovered some maths functions that
+Beniort Mandelbrot discovered some maths functions that
 behaved in very stange ways. Instead of smoothly changing
 they became chaotic and unpredictable.
 
@@ -33,7 +33,7 @@ But, a tiny proportion of the insects, through the natural chaos
 of DNA mutation, because resistant. This tiny proportion that could cope with DDT, having no competition
 with other insects,
 grew in population rapidly and after a few years caused worse crop yields than before DDT
-was introduced. Anyone interested in this should read "silent spring" by "rachel carson"
+was introduced. Anyone interested in this should read "Silent Spring" by "Rachel Carson"
 written in 1962.
 
 How to play
@@ -65,3 +65,4 @@ but people who live in the real world, like electronic engineers
 In fact, most 3D games now used a 4 dimiensional version of complex numbers
 called quaternions to rotate objects in the computer for you to shoot at!
 
+-----------------------------------------------------------------------------------------------------------------
