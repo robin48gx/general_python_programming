@@ -30,7 +30,7 @@ Another example of chaos in nature was the spraying of crops by DDT
 in the 1950's and 60's. At first all the insects died off and the farmers
 had far better crop yields (but also poisoned all the fish in the rivers and killed many wild birds).
 But, a tiny proportion of the insects, through the natural chaos
-of DNA mutation, because resistant. This tiny proportion that could cope with DDT, having no competition
+of DNA mutation, became resistant. This tiny proportion that could cope with DDT, having no competition
 with other insects,
 grew in population rapidly and after a few years caused worse crop yields than before DDT
 was introduced. Anyone interested in this should read "Silent Spring" by "Rachel Carson"
@@ -62,7 +62,7 @@ The imaginary numbers when multiplied  become real numbers but minus!
 Most maths people use the term 'i' to denote a number if imaginary,
 but people who live in the real world, like electronic engineers
 (and python programmers) use 'j'.
-In fact, most 3D games now use a 4 dimiensional version of complex numbers
+In fact, most 3D games now use a 4 dimensional version of complex numbers
 called quaternions to rotate objects in the computer for you to shoot at!
 
 -----------------------------------------------------------------------------------------------------------------
