@@ -7,7 +7,7 @@ import random
 #import numpy as np
 import math
 
-from Tkinter import *
+from tkinter import *
 
 # (c) R P Clark 2019
 def redrawAll(canvas):
@@ -31,16 +31,16 @@ def leftclick(event):
     io = 1000 - io
     canvas.create_rectangle(ro, io, ro+10, io+10, fill=col)
     if mm > 98:
-      print "you are in the STABLE zone "
+      print ("you are in the STABLE zone ")
     if mm < 21 and mm > 2:
-      print "you are in the CHAOS zone "
-    print "Stability factor=",mm," x=",ro,"y=",io
+      print ("you are in the CHAOS zone ")
+    print ("Stability factor=",mm," x=",ro,"y=",io)
     if mm > 65 and mm < 75:
-      print "you found the RAGGED EDGE OF CHAOS YOU WON with effort level TRICKY"
+      print ("you found the RAGGED EDGE OF CHAOS YOU WON with effort level TRICKY")
       draw_complete()
 def rightclick(event):
     print("Easy click")
-    print event.x, event.y
+    print (event.x, event.y)
     r = event.x/1000.0*3.0 -2.0 + rseed
     i = (1000-event.y)/1000.0*2.0 -1.0 + iseed
     #print "as coords in mandel plane r=",r," i=",i
@@ -52,12 +52,12 @@ def rightclick(event):
     io = 1000 - io
     canvas.create_rectangle(ro, io, ro+10, io+10, fill=col)
     if mm > 98:
-      print "you are in the STABLE zone "
+      print ("you are in the STABLE zone ")
     if mm < 21 and mm > 2:
-      print "you are in the CHAOS zone "
-    print "Stability factor=",mm," x=",ro,"y=",io
+      print ("you are in the CHAOS zone ")
+    print ("Stability factor=",mm," x=",ro,"y=",io)
     if mm > 20 and mm < 80:
-      print "you found the RAGGED EDGE OF CHAOS YOU WON with effort level EASY"
+      print ("you found the RAGGED EDGE OF CHAOS YOU WON with effort level EASY")
       draw_complete()
 def middleclick(event):
     print("middle")
@@ -80,7 +80,7 @@ rot = random.randint(-1570, 1570) / 1000.0
 mag = random.randint(500, 2570) / 1000.0
 #mag = 0.5
 zz = mag * complex(math.cos(rot), math.sin(rot))
-print " rotation ", rot, "degrees ", 90*rot/1.57, "zz ",  zz
+print (" rotation ", rot, "degrees ", 90*rot/1.57, "zz ",  zz)
 def mandelbrot (re, Im, max_iter):
   c = complex (Re,Im) 
   #print " complex c ",c
@@ -128,10 +128,10 @@ def get_col(mm):
 columns = 10
 rows = 10
 
-print "HijFong"
+print ("HijFong")
 for Re in range ( -2000, 1000, 333 ):
     for Im in range ( -1000, 1000, 200 ):
-        print mandelbrot(Re/1000.0,Im/1000.0,100),
+        print (mandelbrot(Re/1000.0,Im/1000.0,100))
     print
 
 mm = 40
@@ -149,7 +149,7 @@ rseed = r
 iseed = i
 
 def draw_complete():
-  print "draw complete called"
+  print ("draw complete called")
   for rr in range (0, 1000, 10):
    for ii in range (0, 1000, 10):
      r = rr/1000.0*3.0 -2.0 + rseed
@@ -175,8 +175,8 @@ io = 0.0
 
 while 1:
   
-  real = raw_input("player 1: Real: ")
-  imag = raw_input("player 1: Imag: ")
+  real = input("player 1: Real: ")
+  imag = input("player 1: Imag: ")
   
   r = r + float(real)/100.0;
   i = i - float(imag)/100.0;
@@ -187,12 +187,12 @@ while 1:
   col = get_col(mm)
   canvas.create_rectangle(ro+500, io+500, ro+500+10, io+500+10, fill=col)
   if mm > 98:
-      print "you are in the STABLE zone "
+      print ("you are in the STABLE zone ")
   if mm < 21:
-      print "you are in the CHAOS zone "
-  print "Stability factor=",mm," x=",ro,"y=",io
+      print ("you are in the CHAOS zone ")
+  print ("Stability factor=",mm," x=",ro,"y=",io)
   if mm == 99: #if mm > 70 and mm < 75:
-    print "you found the RAGGED EDGE OF CHAOS YOU WON"
+    print ("you found the RAGGED EDGE OF CHAOS YOU WON")
     draw_complete()
 
   real = raw_input("player 2: Real: ")
@@ -207,11 +207,11 @@ while 1:
   col = get_col(mm)
   canvas.create_rectangle(ro+500, io+500, ro+500+10, io+500+10, fill=col)
   if mm > 98:
-      print "you are in the STABLE zone "
+      print ("you are in the STABLE zone ")
   if mm < 21:
-      print "you are in the CHAOS zone "
-  print "Stability factor=",mm," x=",ro,"y=",io
+      print ("you are in the CHAOS zone ")
+  print ("Stability factor=",mm," x=",ro,"y=",io)
   if mm == 99: #if mm > 70 and mm < 75:
-    print "you found the RAGGED EDGE OF CHAOS YOU WON"
+    print ("you found the RAGGED EDGE OF CHAOS YOU WON")
     draw_complete()
   
