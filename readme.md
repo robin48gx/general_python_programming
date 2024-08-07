@@ -33,7 +33,7 @@ But, a tiny proportion of the insects, through the natural chaos
 of DNA mutation, became resistant. This tiny proportion that could cope with DDT, having no competition
 with other insects,
 grew in population rapidly and after a few years caused worse crop yields than before DDT
-was introduced. Anyone interested in this should read "Silent Spring" by "Rachel Carson"
+was introduced and the DDT was poisoning humans as well. Anyone interested in this should read "Silent Spring" by "Rachel Carson"
 written in 1962.
 
 How to play
