@@ -48,6 +48,8 @@ The aim of the game is to find a pixel in the middle of the chaotic and
 the stable zone.
 Once this is clicked on the entire shape, previously hidden, is drawn in full on the screen.
 
+If you click the LEFT mouse, this is a harder click (you need to find a more chaotic part).
+The RIGHT click is a little easier and allows you to solve/reveal the puzzle with a less chaotic point.
 Enjoy the chaos!
 
 For Maths people
